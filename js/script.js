@@ -36,5 +36,9 @@ const root = new Vue({
                 console.log(this.currentIndex);
             }
         },
+
+        selectDot(i) {
+            this.currentIndex = i; 
+        }
     },
 });
