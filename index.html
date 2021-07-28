@@ -12,15 +12,17 @@
 </head>
 <body>
     <div id="root">
-        <div class="container d-flex justify-content-center align-items-center">
+        <div class="container">
             <div class="row">
-                <div class="col-2 col-md-3">
+                <div class="col-2 col-md-1 d-flex justify-content-center align-items-center">
                     <i class="fas fa-angle-left fa-4x"></i>
                 </div>
 
-                <div class="col-8 col-md-6"></div>
-                
-                <div class="col-2 col-md-3">
+                <div class="img-box col-8 col-md-10 d-flex align-items-center">
+                    <img v-for="(item, index) in images" v-bind:src="item" class="img-fluid">
+                </div>
+
+                <div class="col-2 col-md-1 d-flex justify-content-center align-items-center">
                     <i class="fas fa-angle-right fa-4x"></i>
                 </div>
             </div>
