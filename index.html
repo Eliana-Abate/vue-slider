@@ -20,12 +20,10 @@
 
                 <div class="col-8 col-md-10">
                     <div class="img-box d-flex align-items-center">
-                        <img v-for="(item, index) in images" v-bind:src="item" class="img-fluid" v-bind:class="isCurrentImg(index)">
+                        <img class="img-fluid" v-for="(item, index) in images" v-bind:src="item" v-bind:class="isCurrentImg(index)">
                         <div id="dots-box">
-                            <div class="single-dot"></div>
-                            <div class="single-dot"></div>
-                            <div class="single-dot"></div>
-                            <div class="single-dot"></div>
+                            <div class="single-dot" v-for="(item, index) in images" v-bind:class="isCurrentImg(index)"></div>
+                            
                         </div>
                     </div>
                 </div>
