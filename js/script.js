@@ -16,7 +16,7 @@ const root = new Vue({
     },
     methods: {
         isCurrentImg(i) {
-            return this.currentIndex === i ? 'current' : ''; 
+            return (this.currentIndex === i) ? 'current' : ''; 
         },
 
         increaseIndex() {
@@ -24,15 +24,16 @@ const root = new Vue({
                 this.currentIndex = 0;
             } else {
                 this.currentIndex++;
-            }
-            
+                console.log(this.currentIndex);
+            }  
         },
 
         decreaseIndex() {
             if (this.currentIndex === 0) {
-                this.currentIndex === this.images.length - 1;
+                this.currentIndex = this.images.length - 1;
             } else {
                 this.currentIndex--;
+                console.log(this.currentIndex);
             }
         },
     },
