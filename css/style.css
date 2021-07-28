@@ -1,3 +1,11 @@
 .img-box {
     height: 700px;
 }
+
+.img-box img {
+    display: none;
+}
+
+.img-box img.current {
+    display: inline-block;
+}
