@@ -19,7 +19,7 @@
                 </div>
 
                 <div class="img-box col-8 col-md-10 d-flex align-items-center">
-                    <img v-for="(item, index) in images" v-bind:src="item" class="img-fluid">
+                    <img v-for="(item, index) in images" v-bind:src="item" class="img-fluid" v-bind:class="isCurrentImg(index)">
                 </div>
 
                 <div class="col-2 col-md-1 d-flex justify-content-center align-items-center">
