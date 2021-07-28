@@ -18,8 +18,14 @@
                     <i class="fas fa-angle-left fa-4x" v-on:click="decreaseIndex"></i>
                 </div>
 
-                <div class="img-box col-8 col-md-10 d-flex align-items-center">
-                    <img v-for="(item, index) in images" v-bind:src="item" class="img-fluid" v-bind:class="isCurrentImg(index)">
+                <div class="col-8 col-md-10 d-flex align-items-center">
+                    <div class="img-box">
+                        <img v-for="(item, index) in images" v-bind:src="item" class="img-fluid" v-bind:class="isCurrentImg(index)">
+                        
+                        <div id="dots-box">
+                            <div class="single-dot"></div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="col-2 col-md-1 d-flex justify-content-center align-items-center">
