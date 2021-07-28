@@ -17,7 +17,23 @@ const root = new Vue({
     methods: {
         isCurrentImg(i) {
             return this.currentIndex === i ? 'current' : ''; 
-        }
+        },
 
+        increaseIndex() {
+            if (this.currentIndex === this.images.length - 1) {
+                this.currentIndex = 0;
+            } else {
+                this.currentIndex++;
+            }
+            
+        },
+
+        decreaseIndex() {
+            if (this.currentIndex === 0) {
+                this.currentIndex === this.images.length - 1;
+            } else {
+                this.currentIndex--;
+            }
+        },
     },
 });
